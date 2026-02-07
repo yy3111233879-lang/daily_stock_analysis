@@ -25,7 +25,7 @@ def setup_env():
         env_path = Path(env_file)
     else:
         env_path = Path(__file__).parent.parent / '.env'
-    load_dotenv(dotenv_path=env_path)
+    load_dotenv(dotenv_path=env_path, override=True)
 
 
 @dataclass
