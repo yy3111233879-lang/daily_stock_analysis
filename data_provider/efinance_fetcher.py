@@ -251,8 +251,8 @@ class EfinanceFetcher(BaseFetcher):
         
         # 根据代码类型选择不同的获取方法
         if _is_etf_code(stock_code):
-            return self._fetch_etf_data(stock_code, start_date, end_date)
-        else:
+        #    return self._fetch_etf_data(stock_code, start_date, end_date)
+        # else:
             return self._fetch_stock_data(stock_code, start_date, end_date)
     
     def _fetch_stock_data(self, stock_code: str, start_date: str, end_date: str) -> pd.DataFrame:
